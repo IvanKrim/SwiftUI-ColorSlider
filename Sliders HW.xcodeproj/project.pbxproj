@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0E0EA71C266E10A70043C2F2 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0EA71B266E10A70043C2F2 /* Background.swift */; };
+		0E5542EA2670BF2000A0ED37 /* SliderValueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5542E92670BF2000A0ED37 /* SliderValueLabel.swift */; };
+		0E5542EC2670C08400A0ED37 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5542EB2670C08400A0ED37 /* ColorView.swift */; };
+		0E5542EF2670C47700A0ED37 /* SliderValueTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5542EE2670C47700A0ED37 /* SliderValueTF.swift */; };
+		0E5542F12670D7DD00A0ED37 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5542F02670D7DD00A0ED37 /* ColorSlider.swift */; };
 		0EDDDCEE266A6DC700E43F61 /* Sliders_HWApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDDCED266A6DC700E43F61 /* Sliders_HWApp.swift */; };
 		0EDDDCF0266A6DC700E43F61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDDCEF266A6DC700E43F61 /* ContentView.swift */; };
 		0EDDDCF2266A6DC900E43F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDDCF1266A6DC900E43F61 /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		0E0EA71B266E10A70043C2F2 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		0E5542E92670BF2000A0ED37 /* SliderValueLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderValueLabel.swift; sourceTree = "<group>"; };
+		0E5542EB2670C08400A0ED37 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		0E5542EE2670C47700A0ED37 /* SliderValueTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderValueTF.swift; sourceTree = "<group>"; };
+		0E5542F02670D7DD00A0ED37 /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
 		0EDDDCEA266A6DC700E43F61 /* Sliders HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sliders HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDDDCED266A6DC700E43F61 /* Sliders_HWApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sliders_HWApp.swift; sourceTree = "<group>"; };
 		0EDDDCEF266A6DC700E43F61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -35,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E5542ED2670C41E00A0ED37 /* ColorSlider */ = {
+			isa = PBXGroup;
+			children = (
+				0E5542EE2670C47700A0ED37 /* SliderValueTF.swift */,
+				0E5542E92670BF2000A0ED37 /* SliderValueLabel.swift */,
+				0E5542F02670D7DD00A0ED37 /* ColorSlider.swift */,
+			);
+			path = ColorSlider;
+			sourceTree = "<group>";
+		};
 		0EDDDCE1266A6DC700E43F61 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				0EDDDCEF266A6DC700E43F61 /* ContentView.swift */,
+				0E5542ED2670C41E00A0ED37 /* ColorSlider */,
+				0E5542EB2670C08400A0ED37 /* ColorView.swift */,
 				0E0EA71B266E10A70043C2F2 /* Background.swift */,
 				0EDDDCED266A6DC700E43F61 /* Sliders_HWApp.swift */,
 				0EDDDCF1266A6DC900E43F61 /* Assets.xcassets */,
@@ -141,9 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E5542F12670D7DD00A0ED37 /* ColorSlider.swift in Sources */,
 				0EDDDCF0266A6DC700E43F61 /* ContentView.swift in Sources */,
 				0EDDDCEE266A6DC700E43F61 /* Sliders_HWApp.swift in Sources */,
 				0E0EA71C266E10A70043C2F2 /* Background.swift in Sources */,
+				0E5542EA2670BF2000A0ED37 /* SliderValueLabel.swift in Sources */,
+				0E5542EF2670C47700A0ED37 /* SliderValueTF.swift in Sources */,
+				0E5542EC2670C08400A0ED37 /* ColorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
