@@ -15,10 +15,18 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Background(red: CGFloat(redSliderValue / 255), green: CGFloat(greenSliderValue / 255), blue: CGFloat(blueSliderValue / 255))
+            Background(
+                red: redSliderValue,
+                green: greenSliderValue,
+                blue: blueSliderValue
+            )
             
             VStack {
-                ColorizedView(red: CGFloat(redSliderValue / 255), green: CGFloat(greenSliderValue / 255), blue: CGFloat(blueSliderValue / 255))
+                ColorizedView(
+                    red: redSliderValue,
+                    green: greenSliderValue,
+                    blue: blueSliderValue
+                )
                 
                 SliderStack(value: $redSliderValue, accentColor: .red)
                 SliderStack(value: $greenSliderValue, accentColor: .green)
@@ -53,19 +61,22 @@ struct SliderStack: View {
             Slider(value: $value, in: 0...255, step: 1)
                 .accentColor(accentColor)
             
-            TextField("", value: $value, formatter: NumberFormatter(), onCommit: checkValue)
-                .disableAutocorrection(true)
-                
-                .frame(width: 45)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .colorMultiply(Color(UIColor(white: 1, alpha: 0.6)))
-                
-                .alert(isPresented: $alertPresented) {
-                    Alert(
-                        title: Text("Wrong Format"),
-                        message: Text("Please enter value from 0 to 255")
-                    )
-                }
+            TextField(
+                "", value: $value,
+                formatter: NumberFormatter(), onCommit: checkValue
+            )
+            .disableAutocorrection(true)
+            
+            .frame(width: 45)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .colorMultiply(Color(UIColor(white: 1, alpha: 0.6)))
+            
+            .alert(isPresented: $alertPresented) {
+                Alert(
+                    title: Text("Wrong Format"),
+                    message: Text("Please enter value from 0 to 255")
+                )
+            }
         }
         .padding(.horizontal)
     }
@@ -80,14 +91,20 @@ struct SliderStack: View {
 
 // MARK: - View
 struct ColorizedView: View {
-    var red: CGFloat
-    var green: CGFloat
-    var blue: CGFloat
+    var red: Double
+    var green: Double
+    var blue: Double
     
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
             .frame(height: 120)
-            .foregroundColor(Color(UIColor(red: red, green: green, blue: blue, alpha: 1.0)))
+            .foregroundColor(
+                Color(
+                    red: red / 255,
+                    green: green / 255,
+                    blue: blue / 255
+                )
+            )
             .overlay(RoundedRectangle(cornerRadius: 15)
                         .stroke(Color.white, lineWidth: 3))
             .padding()
